@@ -1,30 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="PT-BR">
 
 <head>
 	<meta charset="utf-8">
-	<link rel="shortcut icon" href="favicon.ico"/>
+	<link rel="shortcut icon" href="favicon.ico" />
 	<title>Cadastrar um novo Produto </title>
-	<link rel="stylesheet" type="text/css"
-		href="resources/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css"
-		href="resources/css/main.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./resources/css/main.css">
 </head>
 
 <body>
 
-<a href="/funcionarios/index.html">Voltar</a>
+	<a href="../index.html">Acessar listagem dos fucionários</a>
 
-<div id="app">
-	<p>{{mensagem}}</p>
-	
-	<h4>Cadastro de funcionário</h4>
-		
-	<p>Implementar o cadastro de funcionário</p>	
-</div>
+	<div id="app" class="container">
+		<p class="container md-6 center">{{ mensagem }}</p>
 
-	<script src="resources/js/vue.js"></script>
-	<script src="resources/js/axios.min.js"></script>
-	<script src="resources/js/cadastro-de-funcionario.js"></script>
+		<div class="jumbotron container-cadastro">
+			<h2 class="txt-cadastro">Cadastro de funcionário</h2>
+		</div>
+	</div>
+
+	<div class="container">
+		<form action="#" method="POST">
+			<div class="input-group input-group-sm mb-3">
+				<div class="input-group-prepend">
+					<span class="btn btn-outline-secondary" id="btn btn-outline-secondary">Nome</span>
+				</div>
+				<input type="text" name="nome" class="form-control" aria-label="Small"
+					aria-describedby="inputGroup-sizing-sm" required title="Preencha o seu nome">
+			</div>
+			<div class="input-group input-group-sm mb-3">
+				<div class="input-group-prepend">
+					<span class="btn btn-outline-secondary" id="inputGroup-sizing-sm">Setor</span>
+				</div>
+				<input type="text" name="setor" class="form-control" aria-label="Small"
+					aria-describedby="inputGroup-sizing-sm" required title="Preencha o seu setor">
+			</div>
+			<div class="input-group input-group-sm mb-3">
+				<div class="input-group-prepend">
+					<span class="btn btn-outline-secondary" id="inputGroup-sizing-sm">Salario</span>
+				</div>
+				<input type="number" name="salario" class="form-control" aria-label="Small"
+					aria-describedby="inputGroup-sizing-sm" required title="Digite seu salario">
+			</div>
+			<div class="input-group input-group-sm mb-3">
+				<div class="input-group-prepend">
+					<span class="btn btn-outline-secondary" id="inputGroup-sizing-sm">E-mail</span>
+				</div>
+				<input type="email" name="email" class="form-control" aria-label="Small"
+					aria-describedby="inputGroup-sizing-sm" required title="Preencha o seu e-amil">
+			</div>
+			<div class="input-group input-group-sm mb-3">
+				<div class="input-group-prepend">
+					<span class="btn btn-outline-secondary" id="inputGroup-sizing-sm">Idade</span>
+				</div>
+				<input type="number" name="idade" class="form-control" aria-label="Small"
+					aria-describedby="inputGroup-sizing-sm" required maxlength="100" title="Preencha a sua idade">
+			</div>
+			<button type="submit" onclick="" class="btn btn-primary btn-lg btn-block">Cadastrar novo
+				funcionário</button>
+		</form>
+		<div class="footer">
+			<footer class="footer">Desenvolvido por Walisson martins @ 2021</footer>
+			<hr />
+		</div>
+	</div>
+	<!-- import do vue cdn-->
+	<script src="../../WebContent/resources/js/vue.js"></script>
+	<script src="../../WebContent/resources/js/bootstrap.min.js"></script>
+	<script src="./../../WebContent/resources/js/axios.min.js"></script>
+	<script src="../resources/js/cadastro-de-funcionario.js"></script>
 </body>
+
 </html>

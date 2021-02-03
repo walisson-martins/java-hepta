@@ -5,15 +5,18 @@ import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import com.hepta.funcionarios.entity.Funcionario;
+
 class FuncionarioServiceTest {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
+
 	}
-	
+
 	@Test
-	void testFuncionarioRead() {
-		fail("Not yet implemented");
+	void testFuncionarioRead(Funcionario funcionario) {
+
 	}
 
 	@Test

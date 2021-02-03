@@ -2,47 +2,45 @@
 <html>
 
 <head>
-<meta charset="utf-8">
-<link rel="shortcut icon" href="favicon.ico"/>
-<title>Funcionários - Início</title>
-<link rel="stylesheet" type="text/css"
-	href="resources/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-	href="resources/css/bootstrap-vue.css">
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>Funcionários - Início</title>
+	<link rel="stylesheet" type="text/css" href="../WebContent/resources/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../WebContent/pages/resources/css/main.css">
 </head>
 
 <body>
-
-
-	<div id="inicio" class="container-fluid table" >
+	<div id="inicio" class="container-fluid table">
 		<h4>Lista dos Funcionários</h4>
 		<table>
-		  <tr>
-			<th>Nome</th>
-			<th>Setor</th>
-			<th>Salário</th>
-			<th>Email</th>
-			<th>Idade</th>
-			<th></th>
-			<th></th>
-		  </tr>
-		  <tbody id="event-table" >
-			<tr v-for="funcionario in listaProdutos">
-			  <td>{{ funcionario.nome }}</td> 
-			  <td>{{ funcionario.setor.nome }}</td> 
-			  <td>{{ funcionario.salario }}</td> 
-			  <td>{{ funcionario.email }}</td> 
-			  <td>{{ funcionario.idade }}</td>
-			  <td><span @click="">&#9998;</span>
-				<span  @click="">&#10006;</span>
-			  </td>
+			<tr>
+				<th>Nome</th>
+				<th>Setor</th>
+				<th>Salário</th>
+				<th>Email</th>
+				<th>Idade</th>
+				<th></th>
+				<th></th>
 			</tr>
-		  </tbody>
+			<tbody id="event-table">
+				<tr v-for="funcionario in listaProdutos">
+					<td>{{ funcionario.nome }}</td>
+					<td>{{ funcionario.setor.nome }}</td>
+					<td>{{ funcionario.salario }}</td>
+					<td>{{ funcionario.email }}</td>
+					<td>{{ funcionario.idade }}</td>
+					<td><span @click="salvar">&#9998;</span>
+						<span @click="">&#10006;</span>
+					</td>
+				</tr>
+			</tbody>
 		</table>
-	  </div>
-
-	<script src="resources/js/vue.js"></script>
-	<script src="resources/js/axios.min.js"></script>
-	<script src="resources/js/index.js"></script>
+	</div>
+	
+	<script src="../../WebContent/resources/js/vue.js"></script>
+	<script src="../../WebContent/resources/js/bootstrap.min.js"></script>
+	<script src="./../../WebContent/resources/js/axios.min.js"></script>
+	<script src="../resources/js/cadastro-de-funcionario.js"></script>
 </body>
+
 </html>
